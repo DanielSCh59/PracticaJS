@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Pokedex</title>
+</head>
+<body class="body">
+    
+    <section class="principal">
+        <div class="imagen">
+            <img src="./imagenDex.png" alt="" class="imgDex">
+        </div>
+        <div class="contenido">
+            <h2 class="namePrin">Nombre</h2>
+            <h3 id="nombreTxt"></h3>
+            <img src="./pokeball.png" alt="" width="150px" class="imgBall" id="pokeImagen">
+
+            <div width="200px" class="contText">
+                <ul id="txtStats">Stats</ul> <br>   
+                <ul id="txtHabilidades">Habilidades</ul>
+            </div>
+
+        </div>
+        <div class="inputs">
+            <label for="text">Nombre</label>
+            <input type="text" placeholder="pikachu" id="pokeName" name="pokeName">
+            <button onclick="fetchPokemon()">Cambiar Pokemon</button>
+            <button onclick="recargo()">Recargar</button>
+        </div>
+    </section>
+    <section class="segunda">
+        <div class="tablasInput">
+            <select id="casesSelect">
+                <option value="1">Normal</option>
+                <option value="2">Combate</option>
+                <option value="3">Volador</option>
+                <option value="4">Venenoso</option>
+                <option value="5">Tierra</option>
+                <option value="6">Roca</option>
+                <option value="7">Bug</option>
+                <option value="8">Fantasma</option>
+                <option value="9">Metal</option>
+                <option value="10">Fuego</option>
+                <option value="11">Agua</option>
+                <option value="12">Hierba</option>
+                <option value="13">Electrico</option>
+                <option value="14">Psíquico</option>
+                <option value="15">Hielo</option>
+                <option value="16">Dragon</option>
+                <option value="17">Oscuro</option>
+                <option value="18">Hada</option>
+            </select>
+            <button onclick="busquedaTipo()">Buscar</button>
+            <button onclick="recargo()">Recargar</button>
+            <h2> Buscar pokemones por tipo </h2>
+        </div>
+        <section class="tbls">
+            <div class="pb"></div>
+            <div class="tb" id="sectionTb"></div>
+        </section>
+        <br>
+    </section>
+
+</body>
+
+<footer>
+    <script src="./action.js"></script>
+</footer>
+</html>
